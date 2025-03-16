@@ -3,7 +3,7 @@ name: dhscanner-sast
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   run-dhscanner:
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
       - name: checkout specific tag
         uses: actions/checkout@v4
         with:
-          ref: '1.2.1.dhscanner'
+          ref: 'v15.6.2'
 
       - name: send healthcheck to dhscanner
         run: |
